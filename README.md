@@ -6,12 +6,12 @@ This is a repository for notebooks, data, extra details, and visualizations rela
 
 ### JSTOR Research for Data
 
-The vast majority of our data comes from JSTOR Data for Research, which is now known as Constellate.  We used the JSTOR area studies filters to select texts from three distinct disciplines:
+The vast majority of our data comes from JSTOR Data for Research, which is now known as [Constellate](https://constellate.org/browse/jstor-subjects).  We used the JSTOR area studies filters to select texts from three distinct disciplines:
 - Slavic Studies, 1991-2020, 41,251 titles
 - African American Studies, 1985-2020, 57,958 titles  
 - Gender Studies, 1992-2020, 24,999 titles 
--  
-For predominantly English-language academic sources, we analyzed 41,251 texts, including both articles and books, provided by JSTOR Data for Research within a “Slavic Studies” cluster. For each text, JSTOR provides a list of all the words in the text and their frequency.
+
+For each text, JSTOR provides a list of all the words in the text and their frequency. While data was available for 1-gram, 2-grams and 3-grams, we only made use of the 1-gram data. 
 
 This section explains how we built our corpus so that others can recreate the dataset for themselves. The means by which we downloaded parts of our corpus resulted in severe limitations to our dataset, which we had to overcome.  The texts of *Logos* (2010-2020) and *Veche* (1994-2018) were downloaded from their respective publishers, meaning that we had access to the texts of these journals in their original form. Our *Logos* dataset can be downloaded in full from [this Google Drive folder](https://drive.google.com/drive/folders/1XkDAaBmx2GEUTRNvbawYNX4KHmtn6U9P). However, because we obtained our datasets for *Slavic Review* (1991-2016), *Russian Review* (1991-2014), and *SEEJ* (1991-2016) through [JSTOR Data for Research](https://about.jstor.org/whats-in-jstor/text-mining-support/), that data does not contain the full text of the articles and book chapters it includes. For each text, the service offers a metadata file with essential bibliographic information as well as files with the frequencies in the text of single terms (1-grams), two-term spans (2-grams), and three-term spans (3-grams). 
 
