@@ -4,6 +4,11 @@ This is a repository for notebooks, data, extra details, and visualizations rela
 
 ## 0. Preliminary Approaches: Corpus Building and Methodology
 
+
+### Hatebase 
+
+Our initial experiments worked from terms contained in hatebase.  Using the [HateBase](https://github.com/hatebase/Hatebase-API-Docs), we dowloaded all of the terms in the database and created a single csv file (in the repository above).    
+
 ### JSTOR Research for Data
 
 The vast majority of our data comes from JSTOR Data for Research, which is now known as [Constellate](https://constellate.org/browse/jstor-subjects).  We used the JSTOR area studies filters to select texts from three distinct disciplines:
