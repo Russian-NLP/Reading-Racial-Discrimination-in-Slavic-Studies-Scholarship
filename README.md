@@ -2,27 +2,22 @@
 
 This is a repository for notebooks, data, extra details, and visualizations related to the article "Reading Racial Discrimination in Slavic Studies Scholarship through a Digital Lens" in *Slavic Review*. In this README, we describe all of the process behind building the datasets, the models we ran, and our preliminary results in further detail than permitted by the space limitations of the article published in the journal. The README also directs to the relevant datasets and models for each section of the associated *Slavic Review* article. 
 
-## 0. Preliminary Approaches: Corpus Building and Methodology
-
+# Corpus Building and Data Sources
 
 ### Hatebase 
 
 Our initial experiments worked from terms contained in hatebase.  Using the [HateBase](https://github.com/hatebase/Hatebase-API-Docs), we dowloaded all of the terms in the database and created a single csv file (in the repository above).  For a searchable version of the terms [click here](https://flatgithub.com/Russian-NLP/Reading-Racial-Discrimination-in-Slavic-Studies-Scholarship/0_preliminary_approaches?filename=0_preliminary_approaches%2Fhatebase.csv&filters=&sha=d2b4f6e4ff3d94816b13071483d7e52b8fccc457&sort=&stickyColumnName=)  
 
-### JSTOR Research for Data
+### JSTOR Data for Research
 
 The vast majority of our data comes from JSTOR Data for Research, which is now known as [Constellate](https://constellate.org/browse/jstor-subjects).  We used the JSTOR area studies filters to select texts from three distinct disciplines:
 - Slavic Studies, 1991-2020, 41,251 titles
 - African American Studies, 1985-2020, 57,958 titles  
 - Gender Studies, 1992-2020, 24,999 titles 
 
-For each text, JSTOR provides a list of all the words in the text and their frequency. While data was available for 1-gram, 2-grams and 3-grams, we only made use of the 1-gram data. 
+For each text, JSTOR provides a list of all the words in the text and their frequency. While data was available for single terms (1-grams), two-term spans (2-grams), and three-term spans (3-grams), we only made use of the 1-gram data. JSTOR makes files available that provide data on the lexical features of the text without making it possible to reconstruct the article or study the co-occurrence of words in context. Given copyright restrictions, this is an understandable choice on the part of JSTOR. However, most text analysis methods and tools require raw text as input and are not able to process the data provided by Data for Research. The creation of pseudo-texts to solve this problem simply involved the addition of each term in the text the same number of times recorded in the data. For example, if the data tells us that the  term “sushki” appears three times in an article, we would create the pseudo-text “sushki sushki sushki” and combine this pseudo-text with others to form a pseudo-text of the entire article at hand. This choice isn’t ideal but allowed us to use topic modeling tools and to train classification models using the pseudo-texts.  Further research with the full text of the articles and book chapters would provide better results, but the pseudo-texts were sufficient for our experiments and rapid response research.
 
-This section explains how we built our corpus so that others can recreate the dataset for themselves. The means by which we downloaded parts of our corpus resulted in severe limitations to our dataset, which we had to overcome.  The texts of *Logos* (2010-2020) and *Veche* (1994-2018) were downloaded from their respective publishers, meaning that we had access to the texts of these journals in their original form. Our *Logos* dataset can be downloaded in full from [this Google Drive folder](https://drive.google.com/drive/folders/1XkDAaBmx2GEUTRNvbawYNX4KHmtn6U9P). However, because we obtained our datasets for *Slavic Review* (1991-2016), *Russian Review* (1991-2014), and *SEEJ* (1991-2016) through [JSTOR Data for Research](https://about.jstor.org/whats-in-jstor/text-mining-support/), that data does not contain the full text of the articles and book chapters it includes. For each text, the service offers a metadata file with essential bibliographic information as well as files with the frequencies in the text of single terms (1-grams), two-term spans (2-grams), and three-term spans (3-grams). 
-
-Terms of use of electronic repositories such as JSTOR prevent us from sharing our full dataset in this GitHub repository. To overcome this restriction, we created pseudo-texts from metadata and lists of most frequent terms and phrases from each article or chapter. In other words, JSTOR makes files available that provide data on the lexical features of the text without making it possible to reconstruct the article or study the co-occurrence of words in context. Given copyright restrictions, this is an understandable choice on the part of JSTOR. However, most text analysis methods and tools require raw text as input and are not able to process the data provided by Data for Research. The creation of pseudo-texts to solve this problem simply involved the addition of each term in the text the same number of times recorded in the data. For example, if the data tells us that the  term “sushki” appears three times in an article, we would create the pseudo-text “sushki sushki sushki” and combine this pseudo-text with others to form a pseudo-text of the entire article at hand. This choice isn’t ideal but allowed us to use topic modeling tools and to train classification models using the pseudo-texts.  Further research with the full text of the articles and book chapters would provide better results, but the pseudo-texts were sufficient for our experiments and rapid response research.
-
-**can we share our pseudo texts? Or not?
+The texts of *Logos* (2010-2020) and *Veche* (1994-2018) were downloaded from their respective publishers, meaning that we had access to the texts of these journals in their original form. Our *Logos* dataset can be downloaded in full from [this Google Drive folder](https://drive.google.com/drive/folders/1XkDAaBmx2GEUTRNvbawYNX4KHmtn6U9P). 
 
 ## 1. Topic Modeling
 
