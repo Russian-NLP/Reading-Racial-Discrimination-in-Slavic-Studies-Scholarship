@@ -7,7 +7,7 @@ This is a repository for notebooks, data, extra details, and visualizations rela
 
 ### Hatebase 
 
-Our initial experiments worked from terms contained in hatebase.  Using the [HateBase](https://github.com/hatebase/Hatebase-API-Docs), we dowloaded all of the terms in the database and created a single csv file (in the repository above).    
+Our initial experiments worked from terms contained in hatebase.  Using the [HateBase](https://github.com/hatebase/Hatebase-API-Docs), we dowloaded all of the terms in the database and created a single csv file (in the repository above).  For a searchable version of the terms [click here](https://flatgithub.com/Russian-NLP/Reading-Racial-Discrimination-in-Slavic-Studies-Scholarship/0_preliminary_approaches?filename=0_preliminary_approaches%2Fhatebase.csv&filters=&sha=d2b4f6e4ff3d94816b13071483d7e52b8fccc457&sort=&stickyColumnName=)  
 
 ### JSTOR Research for Data
 
