@@ -6,7 +6,7 @@ This is a repository for notebooks, data, extra details, and visualizations rela
 
 ### Hatebase 
 
-Our initial experiments worked from terms contained in hatebase.  Using the [HateBase](https://github.com/hatebase/Hatebase-API-Docs), we dowloaded all of the terms in the database and created a single csv file (in the repository above).  For a searchable version of the terms [click here](https://flatgithub.com/Russian-NLP/Reading-Racial-Discrimination-in-Slavic-Studies-Scholarship/0_preliminary_approaches?filename=0_preliminary_approaches%2Fhatebase.csv&filters=&sha=d2b4f6e4ff3d94816b13071483d7e52b8fccc457&sort=&stickyColumnName=)  
+Our initial experiments worked from terms contained in hatebase.  Using the [HateBase](https://github.com/hatebase/Hatebase-API-Docs), we dowloaded all of the terms in the database and created a single csv file (in the repository above).  For a searchable version of the terms [click here](https://flatgithub.com/Russian-NLP/Reading-Racial-Discrimination-in-Slavic-Studies-Scholarship/0_preliminary_approaches?filename=0_preliminary_approaches%2Fhatebase.csv&filters=&sha=d2b4f6e4ff3d94816b13071483d7e52b8fccc457&sort=&stickyColumnName=).  
 
 ### JSTOR Data for Research
 
@@ -44,5 +44,21 @@ In addition to the topic modeling that formed that bulk of our engagement with t
 **term frequency images? 
 **color convergence for Slavic Studies/Gender Studies/African American Studies? Decreasing ability for model to predict. Purple and yellow?
 
-## 4. Future work/Discussion
-Russian term frequency/Zhurnal'nyi zal, topic modeling over time
+## 4. Future Work with Russian Sources
+
+Willing to expand our Russian corpora we have decided to analyse the content of [*Zhurnal'nyi Zal*](https://magazines.gorky.media/), which is a literature-based Internet catalog representing the activities of Russian liberal arts thick magazines published in Russia and abroad. The article contents include a title, body, author name and publication date. The data scraped was stripped out of HTML tags, XML comments, CSS information, and finally stored in JSON format. We were assisted in this work by Alexander Kudryashov and Michael Gelperin - 1st year Data, Culture and Visualization Master students at ITMO University, St. Petersburg.
+
+We created a corpus of 24,295 articles from *Zhurnal’nyi Zal*. Of this corpus, the most articles came from the magazine *Noviy Mir*, which has the highest number of issues published in the entire digital collection. The archive contains issues of that publication since 1993.
+
+Data scraping tech stack used consisted of pure Python 3 with its libraries: one for making network calls, another to analyze texts retrieved with regular expressions and one for converting data to JSON format and store it on the disk.
+
+After collecting the data, the data was prepared for further study. Articles were split into metadata CSVs and raw texts. Apart from necessary steps such as cleansing, lemmatization, and tokenization, we focused on stopwords removal to improve the quality of the topics. 
+
+Next, we loaded the texts into the (Latent Dirichlet Allocation (LDA) model)[https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24]. It output a set of topics and the most probable topic for each article. We joined the output with metadata and created interactive graphs using the (plot.ly Python library)[https://plotly.com/python/].
+
+After those steps, it is possible to see articles per topic distribution for the whole journal or its subset with the ability to filter articles by publication date, genre, author, and other metadata. Another visualization is placing topic distributions over a timescale, allowing to observe topic dynamics. As an example, please see (this Colab notebook)[https://colab.research.google.com/drive/1h2Mmij4x7A_ujuwa5TgrZz0W96kpmkVH#scrollTo=SezSKgn8XPhK] which shows how topics change over time for *Studia* magazine.
+
+In addition, we have translated the most common hate words found in prior steps into Russian language and calculated term frequencies for them for our corpus. The preliminary results could be found (here)[https://colab.research.google.com/drive/1h2Mmij4x7A_ujuwa5TgrZz0W96kpmkVH#scrollTo=SezSKgn8XPhK].
+
+It is worth mentioning that the preliminary results of *Zhurnal'nyi Zal* corpus expand the discussion of Slavic Studies field and allow to raise more specific research questions on demand. We anticipate continuing to work on the topic modeling analysis of the *Zhurnal'nyi Zal* corpus. 
+
