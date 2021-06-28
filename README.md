@@ -40,11 +40,7 @@ In addition to the topic modeling that formed that bulk of our engagement with t
 **clarify relationship of this work to Underwood if the final version of the article is not sufficient, clarify here if necessary
 
 
-## 3. Additional Images--> put in respective sections with a tiny amount of explination
-**term frequency images? 
-**color convergence for Slavic Studies/Gender Studies/African American Studies? Decreasing ability for model to predict. Purple and yellow?
-
-## 4. Future Work with Russian Sources
+## 3. Future Work with Russian Sources
 
 Willing to expand our Russian corpora we have decided to analyse the content of [*Zhurnal'nyi Zal*](https://magazines.gorky.media/), which is a literature-based Internet catalog representing the activities of Russian liberal arts thick magazines published in Russia and abroad. The article contents include a title, body, author name and publication date. The data scraped was stripped out of HTML tags, XML comments, CSS information, and finally stored in JSON format. We were assisted in this work by Alexander Kudryashov and Michael Gelperin - 1st year Data, Culture and Visualization Master students at ITMO University, St. Petersburg.
 
