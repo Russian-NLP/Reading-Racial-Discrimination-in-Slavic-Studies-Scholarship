@@ -1,6 +1,6 @@
 Notebooks related to experiments with perspectival modeling.
 
-- Model trainin Scripts
+- Model training Scripts
 - Model Files 
 - Differences of perspectival model and our single model and prediction variation over time approach
 
