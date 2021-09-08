@@ -34,10 +34,9 @@ In addition to the topic modeling that formed that bulk of our engagement with t
 
 ## 2. Perspectival Modeling
 
-**introduce spaCy, how it was used to train the models
-**how did we make/get the Slavic Studies/Gender Studies/African American Studies models? sentence or two on how the model was actually trained
-**published example of how else to do this, check out figure XXXX in Distant Horizons (https://raw.githubusercontent.com/tedunderwood/horizon/master/chapter2/images/C2Fig2allSF.jpg)
-**clarify relationship of this work to Underwood if the final version of the article is not sufficient, clarify here if necessary
+To perform the perspectival modeling, we used the [spaCy](https://spacy.io/) Python package for Natural Language Processing (NLP). Readers interested in performing their own studies with spaCy should start by reviewing the free online [Advanced NLP with spaCy course](https://course.spacy.io/en/).
+
+Another scholarly work using this approach is Ted Underwood's [*Distant Horizons: Digital Evidence and Literary Change*](https://www.google.com/books/edition/Distant_Horizons/X1qEDwAAQBAJ?hl=en&gbpv=0). See specifically [Chapter 2 Figure 2]((https://raw.githubusercontent.com/tedunderwood/horizon/master/chapter2/images/C2Fig2allSF.jpg)) for a similar study of modeling literary works. 
 
 
 ## 3. Future Work with Russian Sources
