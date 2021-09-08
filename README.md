@@ -36,7 +36,7 @@ In addition to the topic modeling that formed that bulk of our engagement with t
 
 To perform the perspectival modeling, we used the [spaCy](https://spacy.io/) Python package for Natural Language Processing (NLP). Readers interested in performing their own studies with spaCy should start by reviewing the free online [Advanced NLP with spaCy course](https://course.spacy.io/en/).
 
-Another scholarly work using this approach is Ted Underwood's [*Distant Horizons: Digital Evidence and Literary Change*](https://www.google.com/books/edition/Distant_Horizons/X1qEDwAAQBAJ?hl=en&gbpv=0). See specifically [Chapter 2 Figure 2]((https://raw.githubusercontent.com/tedunderwood/horizon/master/chapter2/images/C2Fig2allSF.jpg)) for a similar study of modeling literary works. 
+Another scholarly work using this approach is Ted Underwood's [*Distant Horizons: Digital Evidence and Literary Change*](https://www.google.com/books/edition/Distant_Horizons/X1qEDwAAQBAJ?hl=en&gbpv=0). See specifically [Chapter 2 Figure 2](https://raw.githubusercontent.com/tedunderwood/horizon/master/chapter2/images/C2Fig2allSF.jpg) for a similar study of modeling literary works. 
 
 
 ## 3. Future Work with Russian Sources
